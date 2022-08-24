@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Project tracking intro component</title>
+</head>
+
+<body>
+  <header class="w flex align-center justify-between m-inline-center pb-4">
+    <img src="./images/logo.svg" class="logo" alt="Logo">
+    <nav class="flex align-center justify-center f-size-small">
+      <ul class="list-none f-bold c-blue-dd">
+        <li>Product</li>
+        <li>Features</li>
+        <li>Pricing</li>
+      </ul>
+      <span class="bg-blue-g"></span>
+      <ul class="list-none f-bold c-blue-g">
+        <li>Login</li>
+      </ul>
+    </nav>
+
+    <img id="toggle" src="./images/icon-hamburger.svg" alt="menu open">
+  </header>
+
+  <main class="w grid">
+    <section class="hero grid">
+      <h2 class="flex align-center c-blue-g"><span class="f-bold bg-blue-dd c-blue-gl">New</span>Monograph Dashboard</h2>
+      <h1 class="f-bold">Powerful insights into your team</h1>
+      <p class="c-blue-g">Project planning and time tracking for agile teams</p>
+      <h3 class="flex align-center f-light c-blue-g"><a class="bg-red" href="#">SCHEDULE A DEMO</a>TO SEE A PREVIEW</h3>
+    </section>
+
+    <img src="./images/illustration-devices.svg"  class="hero-img" alt="Hero Illustration">
+  </main>
+
+  <footer class="grid">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/Ikuewumi" target="_blank">Ayobami Ikuewumi</a>.
+    </p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('img#toggle')
+    const nav = document.querySelector('nav')
+
+    toggle.addEventListener('click', (e) => {
+      nav.classList.toggle('open')
+
+      const isPresent = nav.classList.contains('open')
+
+      toggle.src = isPresent ? './images/icon-close.svg' : './images/icon-hamburger.svg'
+
+    })
+
+  </script>
+</body>
+
+</html>
